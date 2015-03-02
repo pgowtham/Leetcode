@@ -1,0 +1,28 @@
+public class Solution {
+    public int reverse(int x) {
+        boolean flag=true;
+        int res=0;
+        
+        if(x<0)
+        {
+        flag=false;
+        
+            x=0-x;
+        }
+            int p=x;
+        while(p>0)
+        {
+            int mod=p%10;
+            p=p/10;
+            if(res>214748364)
+            return 0;
+            res=res*10+mod;
+        
+        }
+        if(flag==false)
+        res=0-res;
+       return res; 
+    }
+    
+ 
+}
