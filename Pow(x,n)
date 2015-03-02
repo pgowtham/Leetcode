@@ -1,0 +1,32 @@
+public class Solution {
+    public double pow(double x, int n) {
+        
+       double result=1;
+       boolean s=true;
+       if(n<0)
+       {
+           s=false;
+           n=0-n;
+       }
+     while(n>0)
+      {
+        if((n%2)==0)
+        {
+          x=x*x;
+          n=n/2;
+        }
+        else
+        {
+         result=result*x;
+         n--;
+        }
+        
+}
+
+if(s==false)
+result=(1/result);
+
+    return result;
+ }
+
+}
